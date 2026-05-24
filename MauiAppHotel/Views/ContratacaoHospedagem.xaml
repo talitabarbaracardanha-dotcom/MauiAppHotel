@@ -99,7 +99,17 @@
 
                 <Button Text="Avançar" 
                         HorizontalOptions="Center"
+                        Margin="0,0,0,15"
                         Clicked="Button_Clicked"/>
+
+                <Button Text="Sobre"
+                        HorizontalOptions="End"
+                        WidthRequest="80"
+                        HeightRequest="25"
+                        MinimumHeightRequest="25"
+                        Padding="5,0"
+                        FontSize="12"
+                        Clicked="Sobre_Clicked"/>
 
             </VerticalStackLayout>
                 
