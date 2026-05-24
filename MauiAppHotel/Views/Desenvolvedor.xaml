@@ -18,13 +18,27 @@
             HorizontalOptions="Center"
             TextColor="{StaticResource Primary}"/>
 
+
+        <Frame HeightRequest="170"
+               WidthRequest="170"
+               CornerRadius="85"
+               Padding="0"
+               IsClippedToBounds="True"
+               HorizontalOptions="Center"
+               BorderColor="{StaticResource Primary}"
+               HasShadow="True">
+
+            <Image Source="talita.png"
+                   Aspect="AspectFill"/>
+        </Frame>
+
         <Frame BackgroundColor="White"
                Padding="20"
                CornerRadius="10">
 
-        <VerticalStackLayout Spacing="10">
+            <VerticalStackLayout Spacing="10">
 
-            <Label Text="Desenvolvedor"
+            <Label Text="Desenvolvedora"
                    FontAttributes="Bold" />
 
             <Label Text="Talita Barbara Cardanha Lopes"
