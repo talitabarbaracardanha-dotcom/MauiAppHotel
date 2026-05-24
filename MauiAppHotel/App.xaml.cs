@@ -1,9 +1,38 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using MauiAppHotel.Models;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace MauiAppHotel
 {
     public partial class App : Application
     {
+        public List<Quarto> lista_quartos = new List<Quarto>
+        {
+            new Quarto()
+            {
+                Descricao = "Suíte Super Luxo",
+                ValorDiarioAdulto = 110.0,
+                ValorDiarioCrianca = 55.0
+            },
+            new Quarto()
+            {
+                Descricao = "Suíte Luxo",
+                ValorDiarioAdulto = 80.0,
+                ValorDiarioCrianca = 40.0
+            },
+            new Quarto()
+            {
+                Descricao = "Suíte Single",
+                ValorDiarioAdulto = 50.0,
+                ValorDiarioCrianca = 25.0
+            },
+            new Quarto()
+            {
+                Descricao = "Suíte Crise",
+                ValorDiarioAdulto = 25.0,
+                ValorDiarioCrianca = 12.5
+            }
+        };
+
         public App()
         {
             InitializeComponent();
