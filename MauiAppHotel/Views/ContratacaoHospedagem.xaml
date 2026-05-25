@@ -10,12 +10,24 @@
                          Padding="10"
                          Spacing="10">
         
-        <Label   Text="Cálculo da Diária"
+        <Label   Text="Hotel Paradise"
                  FontFamily="Kalam"
-                 FontSize="50"
+                 FontSize="42"
+                 HorizontalOptions="Center"
                  TextColor="{StaticResource Primary}"/>
 
-        <Frame Padding="10">
+        <Label  Text="Reserve sua Hospedagem"
+                FontSize="16"
+                HorizontalOptions="Center"
+                TextColor="Gray"/>
+
+        <Frame Padding="15"
+               Margin="10"
+               CornerRadius="20"
+               BackgroundColor="White"
+               BorderColor="#EAEAEA"
+               HasShadow="True">
+
             <VerticalStackLayout>
                 <Grid RowDefinitions="Auto, Auto"
                       ColumnDefinitions="*, *, 2*">
@@ -60,13 +72,16 @@
                     <VerticalStackLayout>
                         
                        <Label Text="Escolha sua Suíte"
-                       TextTransform="Uppercase"
-                       FontSize="Body"
-                       TextColor="{StaticResource Primary}"/>
+                              Padding="5"
+                              FontAttributes="Bold"
+                              FontSize="18"
+                              TextColor="{StaticResource Primary}"/>
 
                         <Picker x:Name="pck_quarto"
-                        Title="Selecione sua Acomadação"
-                        ItemDisplayBinding="{Binding Descricao}"/>
+                                Title="Selecione sua acomadação"
+                                Background="#F8F8F8"
+                                HeightRequest="60"
+                                ItemDisplayBinding="{Binding Descricao}"/>
                     </VerticalStackLayout>
                 </Frame>
 
@@ -76,39 +91,56 @@
                        BackgroundColor="white">
                     <VerticalStackLayout Spacing="10">
                         
-                        <Label Text="Período de Estadia" 
-                               TextTransform="Uppercase"
-                               FontSize="Body"
+                        <Label Text="Período de Estadia"
+                               Padding="5"
+                               FontAttributes="Bold"
+                               FontSize="18"
                                TextColor="{StaticResource Primary}"/>
 
-                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
-                            <Label Text="Check-in:" />
+                        <HorizontalStackLayout 
+                            HorizontalOptions="Fill"
+                            Spacing="20">
+                            
+                        <Label Text="Check-in:" />
                             <DatePicker x:Name="dtpck_checkin"
+                                        HorizontalOptions="Fill"
+                                        HeightRequest="45"
                                         DateSelected="dtpck_checkin_DateSelected"
-                                            Format="dd/MM/yyyy" />
+                                        Format="dd/MM/yyyy" />
                         </HorizontalStackLayout>
 
-                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
-                            <Label Text="Check-out:" />
+                        <HorizontalStackLayout 
+                            HorizontalOptions="Fill"
+                            Spacing="12">
+                            
+                        <Label Text="Check-out:" />
                             <DatePicker x:Name="dtpck_checkout"
+                                        HorizontalOptions="Fill"
+                                        HeightRequest="45"
                                         Format="dd/MM/yyyy" />
 
                         </HorizontalStackLayout>
                     </VerticalStackLayout>
                 </Frame>
 
-                <Button Text="Avançar" 
-                        HorizontalOptions="Center"
+                <Button Text="Reservar Agora"
+                        HeightRequest="30"
+                        CornerRadius="15"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White"
                         Margin="0,0,0,15"
+                        HorizontalOptions="Fill"
                         Clicked="Button_Clicked"/>
 
                 <Button Text="Sobre"
+                        FontSize="12"
+                        TextColor="Gray"
+                        BackgroundColor="Transparent"
                         HorizontalOptions="End"
                         WidthRequest="80"
                         HeightRequest="25"
-                        MinimumHeightRequest="25"
-                        Padding="5,0"
-                        FontSize="12"
                         Clicked="Sobre_Clicked"/>
 
             </VerticalStackLayout>
